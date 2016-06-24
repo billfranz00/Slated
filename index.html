@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Slated Autocomplete Coding Challenge</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- My CSS -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
+	<!-- Angular Code -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+	
+</head>
+<body ng-app="autoComplete" ng-controller="MainController">
+
+	<header>
+		<h1>Slated Search Results</h1>
+		<h3>Search Dropdown Menu</h3>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+					<form class="form-inline">
+						<div class="form-group">
+							<input ng-keypress="retrieve()" class="form-control" type="text" name="search" placeholder="Search" ng-model="searchInput" id="searchInput">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-sm-4
+			col-md-offset-4 col-sm-offset-4 results" ng-repeat="searchResult in searchResults">
+				<!-- <div>{{ searchResult.link_code }}</div> -->
+				<a ng-href="http://www.slated.com{{ searchResult.link_code }}">{{ searchResult.label }}</a>
+				<img ng-src="{{ searchResult.image_code.src }}">
+				<h3>{{ searchResult.year }} || <span>{{ searchResult.description }}</span></h3>
+				<!-- <searches info="searchResult"></searches> -->
+			</div>
+		</div>
+	</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Module -->
+<script type="text/javascript" src="js/app.js"></script>
+
+<!-- Controllers -->
+<script type="text/javascript" src="js/controllers/MainController.js"></script>
+
+<!-- Services -->
+<script type="text/javascript" src="js/services/searchResults.js"></script>
+
+<!-- Directives -->
+<script type="text/javascript" src="js/directives/searches.js"></script>
+
+
+</body>
+</html>

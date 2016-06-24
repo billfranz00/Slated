@@ -1,0 +1,107 @@
+header {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#searchInput {
+	width: 300px;
+}
+
+.results {
+	color: white;
+	background-color: black;
+	margin-left: 37.5%;
+	width: 25%;
+	padding-bottom: 10px;
+}
+
+.results:hover,
+.results:hover a {
+	background-color: white;
+	color: black;
+}
+
+.results a {
+	font-size: 22.5px;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	top: 10px;
+}
+
+.results img {
+	position: absolute;
+	left: 80%;
+	bottom: 40%;
+	padding-bottom: 10px;
+}
+
+.results h3 {
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+.results h3 span {
+	font-size: 12.5px;
+}
+
+/* ==== Media Queries ==== */
+
+@media (max-width: 1201px) {
+	
+	.results {
+		width: 30%;
+		margin-left: 35%;
+	}
+}
+
+@media (max-width: 991px) {
+
+	header h1,
+	header h3 {
+		margin-left: 10%;
+	}
+
+	.results {
+		width: 40%;
+	}
+}
+
+@media (max-width: 775px) {
+	
+	header form {
+		display: inline-block;
+		margin-left: 5%;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.results {
+		margin-top: -15px;
+		margin-left: 32%;
+		width: 290px;
+	}
+}
+
+@media (max-width: 676px) {
+
+	.results {
+		margin-left: 25%;
+	}
+}
+
+@media (max-width: 512px) {
+
+	.results {
+		margin-left: 20%;
+	}
+}
+
+@media (max-width: 414px) {
+
+	.results {
+		margin-left: 10%;
+	}
+}
